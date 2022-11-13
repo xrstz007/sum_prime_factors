@@ -7,3 +7,11 @@ def prime_checker(num):
             return False
         i += 1
     return True
+
+def prime_list(num):
+    lst = []
+    for i in range(1, num+1):
+        prime = prime_checker(i)
+        if prime == True:
+            lst.append(i)
+    return lst
