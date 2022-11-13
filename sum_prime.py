@@ -7,7 +7,7 @@ def prime_checker(num):
             return False
         i += 1
     return True
-
+    
 def prime_list(num):
     lst = []
     for i in range(1, num+1):
@@ -15,3 +15,14 @@ def prime_list(num):
         if prime == True:
             lst.append(i)
     return lst
+
+def is_a_prime_factor(num):
+    factor_list = []
+    lst = prime_list(num)
+    for i in lst:
+        if num % i == 0:
+            factor_list.append(i)
+    return factor_list
+    
+def prime_add(num):
+    return sum(is_a_prime_factor(num))
